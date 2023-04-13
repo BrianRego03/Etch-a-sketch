@@ -7,8 +7,6 @@
     
     flex-wrap: wrap;
     align-content: center;
+    margin: auto;
     
-}
-.ColorChange{
-    background-color: black;
 }
