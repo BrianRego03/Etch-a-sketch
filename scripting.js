@@ -31,15 +31,6 @@ function gridVerify(){
          return;}     
 }
 
-function blackOrWhite(){
-    squarePrompt();
-    gridVerify();
-    gridDimension();
-    sketch();
-    blackWhiteHover();
-
-}
-
 function sketch(){
        
     
@@ -75,6 +66,13 @@ function blackWhiteHover(){
 
 }
 
+function blackOrWhite(){
+    squarePrompt();
+    gridVerify();
+    gridDimension();
+    sketch();
+    blackWhiteHover();
 
+}
 
 
