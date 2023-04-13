@@ -66,6 +66,10 @@ function blackWhiteHover(){
 
 }
 
+function randomHover(){
+
+}
+
 function blackOrWhite(){
     squarePrompt();
     gridVerify();
@@ -73,6 +77,14 @@ function blackOrWhite(){
     sketch();
     blackWhiteHover();
 
+}
+
+function randomGenerate(){
+    squarePrompt();
+    gridVerify();
+    gridDimension();
+    sketch();
+    randomHover();
 }
 
 
