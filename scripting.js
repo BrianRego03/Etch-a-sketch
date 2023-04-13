@@ -5,16 +5,23 @@ let gridLength;
 let gridString;
 let divMainLength;
 let hoverElement;
-let randBlue=255;
-let randGreen=255;
-let randRed=255;
+let randBlue;
+let randGreen;
+let randRed;
 let randString;
+let gradRed=[];
+let gradBlue=[];
+let gradGreen=[];
+
 
 const blackWhiteBtn = document.querySelector('#blackWhite');
 blackWhiteBtn.addEventListener('click',()=>{blackOrWhite();});
 
 const randBtn = document.querySelector('#randomColor');
 randBtn.addEventListener('click',()=>{randomGenerate();});
+
+const gradBtn = document.querySelector('#gradient');
+gradBtn.addEventListener('click',()=>{gradientGenerate();});
 
 
 
@@ -93,18 +100,24 @@ function randomHover(){
 }
 function gradientHover(){
     hoverElement = document.getElementsByClassName("HoverAction");
+    for(let m=0;m<255;m++){
+        gradBlue[m]=255;
+        gradGreen[m]=255;
+        gradRed[m]=255;
+    }
+    
 
     for(let j=0; j<(squareNumber*squareNumber);j++)
     {
         hoverElement[j].addEventListener('mouseover',function()
             {   
-                randRed-=25;
-                randBlue-=25;
-                randGreen-=25;
-                if((randBlue<0) || (randGreen<0) || (randRed<0))
+                gradRed[j]= (+gradRed[j]) - 25;
+                gradBlue[j]= (+gradBlue[j]) - 25;
+                gradGreen[j]= (+gradGreen[j]) - 25;
+                if((gradBlue<0) || (gradGreen<0) || (gradRed<0))
                     randString="rgb(0,0,0)";
                 else    
-                    randString=`rgb(${randRed},${randGreen},${randBlue})`;
+                    randString=`rgb(${gradRed[j]},${gradGreen[j]},${gradBlue[j]})`;
                 this.style.backgroundColor=randString;
             });
     }
