@@ -30,8 +30,12 @@ function sketch(){
 
 }
 
+if(squareNumber<=100)
+    sketch();
+else
+    alert("Error,number should be 100 or less");    
 
-sketch();
+
 const hoverElement = document.getElementsByClassName("HoverAction");
 console.log(hoverElement);
 for(let j=0; j<(squareNumber*squareNumber);j++)
