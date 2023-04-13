@@ -1,19 +1,44 @@
 const divMain= document.querySelector(".SketchBoard");  
 let divNew;
-let squareNumber=prompt("Number of squares in grid:");
+let squareNumber;
+let gridLength;
+let gridString;
+let divMainLength;
+let hoverElement;
+
+const blackWhiteBtn = document.querySelector('#blackWhite');
+blackWhiteBtn.addEventListener('click',()=>{blackOrWhite();});
 
 
 
 
 
-let gridLength=Math.floor(900/squareNumber);
-let gridString=`${gridLength}px`;
-console.log(gridLength);
-console.log(900/squareNumber);
-let divMainLength=`${gridLength*squareNumber}px`;
-divMain.style.width=divMainLength;
-divMain.style.height=divMainLength;
+function squarePrompt(){
+    squareNumber=prompt("Number of squares in grid:");
+}
 
+function gridDimension(){
+    gridLength=Math.floor(900/squareNumber);
+    gridString=`${gridLength}px`;
+    divMainLength=`${gridLength*squareNumber}px`;
+    divMain.style.width=divMainLength;
+    divMain.style.height=divMainLength;
+}
+
+function gridVerify(){
+    if(squareNumber>100)
+        {alert("Error,number should be 100 or less");
+         return;}     
+}
+
+function blackOrWhite(){
+    squarePrompt();
+    gridVerify();
+    gridDimension();
+    sketch();
+    blackWhiteHover();
+
+}
 
 function sketch(){
        
@@ -35,22 +60,21 @@ function sketch(){
 
 }
 
-if(squareNumber<=100)
-    sketch();
-else
-    alert("Error,number should be 100 or less");    
+function blackWhiteHover(){
+    hoverElement = document.getElementsByClassName("HoverAction");
 
-
-const hoverElement = document.getElementsByClassName("HoverAction");
-console.log(hoverElement);
-for(let j=0; j<(squareNumber*squareNumber);j++)
-{
-    hoverElement[j].addEventListener('mouseover',function()
-    {   
+    for(let j=0; j<(squareNumber*squareNumber);j++)
+    {
+        hoverElement[j].addEventListener('mouseover',function()
+            {   
         
-        this.style.backgroundColor="Black";
-    });
+                this.style.backgroundColor="Black";
+            });
+    }
+
+
 }
+
 
 
 
