@@ -28,7 +28,7 @@ for(let j=0; j<(16*16);j++)
 {
     hoverElement[j].addEventListener('mouseover',function()
     {   
-        console.log("yeah");
+        
         this.style.backgroundColor="Black";
     });
 }
