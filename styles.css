@@ -13,3 +13,18 @@
 body{
     background-color: rgb(65, 65, 65);
 }
+#startButton{
+    height: 40px;
+    width: 100px;
+    background-color: rgb(236, 236, 36);
+    border-radius: 5px;
+    font-weight: 600;
+     
+ }
+.ButtonDiv{
+    display: flex;
+    justify-content:space-between;
+    margin-left: 20em;
+    margin-right: 20em;
+
+}

@@ -1,6 +1,11 @@
 const divMain= document.querySelector(".SketchBoard");  
 let divNew;
 let squareNumber=prompt("Number of squares in grid:");
+
+
+
+
+
 let gridLength=Math.floor(900/squareNumber);
 let gridString=`${gridLength}px`;
 console.log(gridLength);
