@@ -1,16 +1,17 @@
-const divB= document.querySelector(".SketchBoard");  
-let divA;
+const divMain= document.querySelector(".SketchBoard");  
+let divNew;
 function sketch(){
-             
+       
     
     for(let i=0;i<(16*16);i++)
     {   
-        divA=document.createElement('div');
-        divA.style.border="1px solid red";
-        divA.style.width="65px";
-        divA.style.height="65px";
-        divA.style.margin="0px";
-        divB.appendChild(divA).classList.add("HoverAction");
+        divNew=document.createElement('div');
+        divNew.style.border="1px solid red";
+        divNew.style.width="65px";
+        divNew.style.height="65px";
+        divNew.style.margin="0px";
+        divMain.appendChild(divNew).classList.add("HoverAction");
+      
         
         
     }
@@ -21,4 +22,5 @@ function sketch(){
 
 
 sketch();
+
 
