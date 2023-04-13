@@ -5,9 +5,9 @@ let gridLength;
 let gridString;
 let divMainLength;
 let hoverElement;
-let randBlue;
-let randGreen;
-let randRed;
+let randBlue=255;
+let randGreen=255;
+let randRed=255;
 let randString;
 
 const blackWhiteBtn = document.querySelector('#blackWhite');
@@ -91,6 +91,24 @@ function randomHover(){
             });
     }
 }
+function gradientHover(){
+    hoverElement = document.getElementsByClassName("HoverAction");
+
+    for(let j=0; j<(squareNumber*squareNumber);j++)
+    {
+        hoverElement[j].addEventListener('mouseover',function()
+            {   
+                randRed-=25;
+                randBlue-=25;
+                randGreen-=25;
+                if((randBlue<0) || (randGreen<0) || (randRed<0))
+                    randString="rgb(0,0,0)";
+                else    
+                    randString=`rgb(${randRed},${randGreen},${randBlue})`;
+                this.style.backgroundColor=randString;
+            });
+    }
+}
 
 function blackOrWhite(){
     squarePrompt();
@@ -107,6 +125,14 @@ function randomGenerate(){
     gridDimension();
     sketch();
     randomHover();
+}
+
+function gradientGenerate(){
+    squarePrompt();
+    gridVerify();
+    gridDimension();
+    sketch();
+    gradientHover();
 }
 
 
