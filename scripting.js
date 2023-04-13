@@ -5,12 +5,16 @@ let gridLength;
 let gridString;
 let divMainLength;
 let hoverElement;
+let randBlue;
+let randGreen;
+let randRed;
+let randString;
 
 const blackWhiteBtn = document.querySelector('#blackWhite');
 blackWhiteBtn.addEventListener('click',()=>{blackOrWhite();});
 
 const randBtn = document.querySelector('#randomColor');
-randBtn.addEventListener('click',()=>{randomGenerate;});
+randBtn.addEventListener('click',()=>{randomGenerate();});
 
 
 
@@ -26,6 +30,9 @@ function gridDimension(){
     divMainLength=`${gridLength*squareNumber}px`;
     divMain.style.width=divMainLength;
     divMain.style.height=divMainLength;
+    console.log(gridLength);
+    console.log(gridString);
+    console.log(divMainLength);
 }
 
 function gridVerify(){
@@ -70,7 +77,19 @@ function blackWhiteHover(){
 }
 
 function randomHover(){
+    hoverElement = document.getElementsByClassName("HoverAction");
 
+    for(let j=0; j<(squareNumber*squareNumber);j++)
+    {
+        hoverElement[j].addEventListener('mouseover',function()
+            {   
+                randRed=Math.floor(Math.random()*255);
+                randBlue=Math.floor(Math.random()*255);
+                randGreen=Math.floor(Math.random()*255);
+                randString=`rgb(${randRed},${randGreen},${randBlue})`;
+                this.style.backgroundColor=randString;
+            });
+    }
 }
 
 function blackOrWhite(){
