@@ -34,12 +34,6 @@ function squarePrompt(){
 function gridDimension(){
     gridLength=(900/squareNumber);
     gridString=`${gridLength}px`;
-    /*divMainLength=`${gridLength*squareNumber}px`;
-    divMain.style.width=divMainLength;
-    divMain.style.height=divMainLength;
-    console.log(gridLength);
-    console.log(gridString);
-    console.log(divMainLength);*/
 }
 
 function gridVerify(){
@@ -54,7 +48,6 @@ function sketch(){
     for(let i=0;i<(squareNumber*squareNumber);i++)
     {   
         divNew=document.createElement('div');
-        /*divNew.style.border="1px solid red";*/
         divNew.style.width=gridString;
         divNew.style.height=gridString;
         divNew.style.margin="0px";
