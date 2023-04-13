@@ -1,10 +1,5 @@
 .SketchBoard{
-    width: 1072px;
-    height: 1072px;
-    
-    /*border: 1px solid black;*/
     display: flex;
-    
     flex-wrap: wrap;
     align-content: center;
     margin: auto;
