@@ -123,7 +123,15 @@ function gradientHover(){
     }
 }
 
+function reset(){
+const myNode = document.getElementById("gridBoard");
+  while (myNode.firstChild) {
+    myNode.removeChild(myNode.lastChild);
+  }
+}
+
 function blackOrWhite(){
+    reset();
     squarePrompt();
     gridVerify();
     gridDimension();
@@ -133,6 +141,7 @@ function blackOrWhite(){
 }
 
 function randomGenerate(){
+    reset();
     squarePrompt();
     gridVerify();
     gridDimension();
@@ -141,6 +150,7 @@ function randomGenerate(){
 }
 
 function gradientGenerate(){
+    reset();
     squarePrompt();
     gridVerify();
     gridDimension();
