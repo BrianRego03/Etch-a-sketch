@@ -9,6 +9,9 @@ let hoverElement;
 const blackWhiteBtn = document.querySelector('#blackWhite');
 blackWhiteBtn.addEventListener('click',()=>{blackOrWhite();});
 
+const randBtn = document.querySelector('#randomColor');
+randBtn.addEventListener('click',()=>{randomGenerate;});
+
 
 
 
@@ -86,5 +89,6 @@ function randomGenerate(){
     sketch();
     randomHover();
 }
+
 
 
