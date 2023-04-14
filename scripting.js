@@ -28,7 +28,11 @@ gradBtn.addEventListener('click',()=>{gradientGenerate();});
 
 
 function squarePrompt(){
-    squareNumber=prompt("Number of squares in grid:");
+    squareNumber=prompt("Type number of squares in grid (less than 101)");
+}
+
+function gradientSquarePrompt(){
+    squareNumber=prompt("Type number of squares in grid (less than 16)");
 }
 
 function gridDimension(){
@@ -39,6 +43,11 @@ function gridDimension(){
 function gridVerify(){
     if(squareNumber>100)
         {alert("Error,number should be 100 or less");
+         return 1;}     
+}
+function gradientGridVerify(){
+    if(squareNumber>20)
+        {alert("Error,number should be 15 or less");
          return 1;}     
 }
 
@@ -147,8 +156,8 @@ function randomGenerate(){
 
 function gradientGenerate(){
     reset();
-    squarePrompt();
-    gridVerify();
+    gradientSquarePrompt();
+    gradientGridVerify();
     gridDimension();
     sketch();
     gradientHover();
