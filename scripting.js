@@ -39,7 +39,7 @@ function gridDimension(){
 function gridVerify(){
     if(squareNumber>100)
         {alert("Error,number should be 100 or less");
-         return;}     
+         return 1;}     
 }
 
 function sketch(){
@@ -123,10 +123,12 @@ const myNode = document.getElementById("gridBoard");
   }
 }
 
+
 function blackOrWhite(){
     reset();
     squarePrompt();
-    gridVerify();
+    if(gridVerify())
+        return;
     gridDimension();
     sketch();
     blackWhiteHover();
@@ -136,7 +138,8 @@ function blackOrWhite(){
 function randomGenerate(){
     reset();
     squarePrompt();
-    gridVerify();
+    if(gridVerify())
+        return;
     gridDimension();
     sketch();
     randomHover();
