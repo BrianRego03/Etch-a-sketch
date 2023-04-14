@@ -32,7 +32,7 @@ function squarePrompt(){
 }
 
 function gridDimension(){
-    gridLength=(900/squareNumber);
+    gridLength=(600/squareNumber);
     gridString=`${gridLength}px`;
 }
 
