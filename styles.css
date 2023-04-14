@@ -39,13 +39,13 @@ body{
 
 .ButtonDimensions{
     height: 50px;
-    width: 200px;
+    width: 230px;
     margin-left: 40px;
     margin-right: 40px;
     background-color: #b5aa9d;
     font-weight: 700;
     color: rgb(0, 0, 0);
-    font-family:Verdana, Geneva, Tahoma, sans-serif
+    font-size: large;
 }
 .ButtonBackground{
     background-color: #7c90a0;
