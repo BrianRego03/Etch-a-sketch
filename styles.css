@@ -12,16 +12,28 @@
 }
 
 body{
-    background-color: rgb(65, 65, 65);
+    background-color: #747274;
+    margin: 0px;
 }
 
+.PageTitle{
+    background-color: #4e5166;
+    font-size: xx-large;
+    font-weight: 900;
+    text-align: center;
+    color: aliceblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
 .ButtonDiv{
     display: flex;
     justify-content:space-between;
     margin-left: 20em;
     margin-right: 20em;
-    margin-top: 8em;
-    margin-bottom: 2em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    
 
 }
 
@@ -30,4 +42,11 @@ body{
     width: 200px;
     margin-left: 40px;
     margin-right: 40px;
+    background-color: #b5aa9d;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+.ButtonBackground{
+    background-color: #7c90a0;
 }
