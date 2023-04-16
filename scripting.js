@@ -45,11 +45,7 @@ function gridVerify(){
         {alert("Error,number should be 100 or less");
          return 1;}     
 }
-function gradientGridVerify(){
-    if(squareNumber>20)
-        {alert("Error,number should be 15 or less");
-         return 1;}     
-}
+
 
 function sketch(){
        
@@ -102,7 +98,7 @@ function randomHover(){
 }
 function gradientHover(){
     hoverElement = document.getElementsByClassName("HoverAction");
-    for(let m=0;m<255;m++){
+    for(let m=0;m<(squareNumber*squareNumber);m++){
         gradBlue[m]=255;
         gradGreen[m]=255;
         gradRed[m]=255;
@@ -157,11 +153,9 @@ function randomGenerate(){
 function gradientGenerate(){
     reset();
     gradientSquarePrompt();
-    gradientGridVerify();
+    gridVerify();
     gridDimension();
     sketch();
     gradientHover();
 }
-
-
 
