@@ -28,9 +28,9 @@ body{
 }
 .ButtonDiv{
     display: flex;
-    justify-content:space-between;
-    margin-left: 20em;
-    margin-right: 20em;
+    justify-content:space-evenly;
+    margin-left: 30%;
+    margin-right: 30%;
     padding-top: 2em;
     padding-bottom: 2em;
     
@@ -38,10 +38,8 @@ body{
 }
 
 .ButtonDimensions{
-    height: 50px;
-    width: 230px;
-    margin-left: 40px;
-    margin-right: 40px;
+    height: auto;
+    width: auto;
     background-color: #b5aa9d;
     font-weight: 700;
     color: rgb(0, 0, 0);
